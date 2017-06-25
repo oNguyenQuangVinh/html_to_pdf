@@ -1,0 +1,30 @@
+.invoice {
+  width: 700px;
+  max-width: 700px;
+  border: 1px solid black;
+  margin: 50px;
+  padding: 50px;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .notes {
+    margin-top: 100px;
+  }
+
+  table {
+    width: 90%;
+    text-align: left;
+    margin: 0 auto;
+  }
+  th {
+    padding-bottom: 15px;
+  }
+
+  .total td {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 25px;
+  }
+}

@@ -1,0 +1,26 @@
+<div class="invoice">
+  <h1>7 ELEVEN</h1>
+  <h3>To: <%= @user.name %></h3>
+  <h3>Date: <%= DateTime.now.to_time %></h3>
+  <table>
+    <thead>
+        <tr>
+          <th>Description</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% total = 0 %>
+        <% @user.products.each do |product| %>
+          <tr>
+            <td><%= product.name %></td>
+            <td><%= number_to_currency product.price %></td>
+            <% total += product.price %>
+          </tr>
+        <% end %>
+        <tr class="total">
+          <td style="text-align: right">Total: </td>
+          <td><%= number_to_currency total %></span></td>
+        </tr>
+      </tbody>
+  </table>
